@@ -3,10 +3,10 @@
 /**
  * test controller
  */
-class Pages extends Controller {
+class Pages extends CI_Controller {
     
-    function Page() {
-        parent::Controller();
+    function __Construct() {
+        parent::__Construct();
 		$this->load->model('PageModel');
 		$this->load->helper('url');
         $this->load->helper('form');
@@ -18,7 +18,7 @@ class Pages extends Controller {
         $this->load->view('page_view', $data);
     }
     
-    function content(){
+    function contents(){
         $data['title'] = 'Content List';
         $data['contents'] = $this->PageModel->fetchRow($this->uri->segment(3), 'page_id', 'content');
         $this->load->view('content_view', $data);

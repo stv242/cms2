@@ -26,7 +26,7 @@ $config['base_url']	= 'http://cms2.devserve5.co.uk/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
